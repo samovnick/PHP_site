@@ -1,0 +1,1 @@
+echo <h2>Registration</h2>

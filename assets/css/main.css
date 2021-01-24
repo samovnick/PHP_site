@@ -1,0 +1,68 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+header,
+nav,
+main,
+footer {
+  width: 100%;
+  margin: 0;
+}
+
+header img {
+  width: 100%;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  background-color: rgb(198, 231, 248);
+}
+
+nav ul li:hover {
+  background-color: rgb(118, 188, 239);
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: rgb(54, 120, 216);
+  transition: 0.5s linear;
+}
+
+main {
+  height: 500px;
+}
+
+footer {
+  padding: 10px;
+  font-size: 1.2em;
+  color: rgb(54, 120, 216);
+  background-color: rgb(198, 231, 248);
+}
+
+form div {
+  padding: 10px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 5px;
+  color: #fff;
+  background-color: rgb(46, 111, 196);
+}
