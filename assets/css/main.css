@@ -10,7 +10,6 @@
 }
 
 header,
-nav,
 main,
 footer {
   width: 100%;
@@ -21,10 +20,18 @@ header img {
   width: 100%;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(198, 231, 248);
+  font-size: 1.2em;
+  color: rgb(54, 120, 216);
+}
+
 nav ul {
+  flex-grow: 1;
   list-style-type: none;
   display: flex;
-  background-color: rgb(198, 231, 248);
 }
 
 nav ul li:hover {
@@ -35,9 +42,14 @@ nav ul li a {
   display: block;
   padding: 10px;
   text-decoration: none;
+  transition: 0.5s linear;
+}
+
+.authentication form {
+  flex-grow: 1;
+  padding: 10px;
   font-size: 1.2em;
   color: rgb(54, 120, 216);
-  transition: 0.5s linear;
 }
 
 main {
