@@ -11,6 +11,7 @@
 
 header,
 main,
+nav,
 footer {
   width: 100%;
   margin: 0;
@@ -25,13 +26,12 @@ nav {
   justify-content: space-between;
   background-color: rgb(198, 231, 248);
   font-size: 1.2em;
-  color: rgb(54, 120, 216);
 }
 
 nav ul {
-  flex-grow: 1;
   list-style-type: none;
   display: flex;
+  margin: 0;
 }
 
 nav ul li:hover {
@@ -41,8 +41,14 @@ nav ul li:hover {
 nav ul li a {
   display: block;
   padding: 10px;
+  color: rgb(54, 120, 216);
   text-decoration: none;
   transition: 0.5s linear;
+}
+
+nav form div {
+  padding: 10px;
+  color: rgb(54, 120, 216);
 }
 
 .authentication form {
@@ -53,7 +59,7 @@ nav ul li a {
 }
 
 main {
-  height: 500px;
+  min-height: 500px;
 }
 
 footer {

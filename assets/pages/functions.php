@@ -1,4 +1,5 @@
 <?php
+// work with files
 $users = "assets/pages/users.txt";
 function register($name, $pass, $email)
 {
@@ -33,6 +34,7 @@ function register($name, $pass, $email)
   return true;
 }
 
+//work with BD
 // MYSQL
 $mysqli=false;
 
@@ -55,6 +57,32 @@ function resultToArray($result_set) {
 		while($row=$result_set->fetch_assoc())
 			$array[]=$row;
 		return $array;
+}
+
+//authorization
+function login($name,$pass)
+{
+  $name=trim(htmlspecialchars($name));
+  $pass=trim(htmlspecialchars($pass));
+  if ($name=="" || $pass=="") {
+    echo "<h3/><span style='color:red;'>
+    Fill All Required Fields!</span><h3/>";
+    return false;
+  }
+  connectDB();
+  global $mysqli;
+  connectDB();
+  $success=$mysqli->query("select * from users where login='$name' and pass='$pass'");
+  if ($row=$success->fetch_array()) {
+    $_SESSION['user']=$name;
+    closeDB();
+    return true;
+  }
+  else {
+    echo "<h3/><span style='color:red;'>
+    No Such User!</span><h3/>";
+    return false;
+  }
 }
 
 

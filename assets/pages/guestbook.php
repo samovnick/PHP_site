@@ -1,9 +1,9 @@
 <h3>Оставить комментарий</h3>
 <form name="guestbook" action="" method="post">
-	<label for="user">Name:
-  <input type="text" name="user" id="user">  
-	<label for="comment">Comment:
-  <input type="text" name="comment" id="comment"> 	
+	<label for="user">Name:<br>  
+  <input type="text" name="user" id="user"> <br>  
+	<label for="comment">Comment:<br>  
+  <textarea name="comment" id="comment" rows="10" cols="50"></textarea><br>   	
 	<button type="submit" name="commentbtn">Send comment </button>
 	<h3>Записи в гостевой книге</h3>
 	<div>
